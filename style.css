@@ -1,74 +1,132 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background: linear-gradient(to right, #1d2b64, #f8cdda);
-  font-family: 'Segoe UI', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.container {
-  text-align: center;
-  background: #fff;
-  padding: 40px;
-  border-radius: 15px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-}
-
-h1 {
-  margin-bottom: 20px;
-  color: #333;
-}
-
-#status {
-  margin-bottom: 20px;
-  font-size: 1.2rem;
-  color: #555;
-}
-
-.board {
-  display: grid;
-  grid-template-columns: repeat(3, 100px);
-  grid-gap: 10px;
-  margin-bottom: 20px;
-  justify-content: center;
-}
-
-.cell {
-  width: 100px;
-  height: 100px;
-  background-color: #eaeaea;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2.5rem;
-  cursor: pointer;
-  user-select: none;
-  border-radius: 10px;
-  transition: background 0.3s ease;
-}
-
-.cell:hover {
-  background-color: #d5d5d5;
-}
-
-button {
-  padding: 10px 20px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 8px;
-  background-color: #007bff;
-  color: white;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-image: url('https://cdn.pixabay.com/photo/2021/06/23/14/44/pixel-6359804_1280.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.75);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+    color: #fff;
+    max-width: 400px;
+    width: 90%;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+    color: #f3f3f3;
+  }
+  
+  #status {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: #ddd;
+    min-height: 40px;
+  }
+  
+  #status.winner {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #00ffcc;
+    animation: scaleFadeIn 1s ease-out forwards;
+  }
+  
+  @keyframes scaleFadeIn {
+    0% {
+      transform: scale(0.2);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1.2);
+      opacity: 1;
+    }
+  }
+  
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+  }
+  
+  .cell {
+    width: 100px;
+    height: 100px;
+    background-color: #eaeaea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    font-family: 'Luckiest Guy', cursive;
+    color: white;
+  }
+  
+  .cell.x {
+    background-color: black;
+    color: white;
+  }
+  
+  .cell.o {
+    background-color: red;
+    color: white;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin: 5px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  input {
+    padding: 10px;
+    font-size: 1rem;
+    margin: 10px 5px;
+    width: 80%;
+    border: none;
+    border-radius: 6px;
+  }
+  
+  .footer {
+    margin-top: 20px;
+    font-size: 0.85rem;
+    color: #ccc;
+    text-align: center;
+    opacity: 0.8;
+  }
+  

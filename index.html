@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,27 +6,46 @@
   <meta name="description" content="Tic Tac Toe Game using HTML, CSS, and JavaScript" />
   <title>Tic-Tac-Toe Game</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
 </head>
 <body>
 
   <div class="container">
     <h1>Tic Tac Toe</h1>
-    <p id="status">Player X's turn</p>
 
-    <div class="board" id="board">
-      <!-- 9 Cells -->
-      <div class="cell" data-index="0"></div>
-      <div class="cell" data-index="1"></div>
-      <div class="cell" data-index="2"></div>
-      <div class="cell" data-index="3"></div>
-      <div class="cell" data-index="4"></div>
-      <div class="cell" data-index="5"></div>
-      <div class="cell" data-index="6"></div>
-      <div class="cell" data-index="7"></div>
-      <div class="cell" data-index="8"></div>
+    <!-- Player Name Input Section -->
+    <div id="playerForm">
+      <input type="text" id="playerXName" placeholder="Enter Player X Name" />
+      <input type="text" id="playerOName" placeholder="Enter Player O Name (optional for AI)" />
+      <button id="startBtn">Start Game</button>
     </div>
 
-    <button id="resetBtn">Reset Game</button>
+    <!-- Game Area -->
+    <div id="gameArea" style="display:none;">
+      <p id="status">Player X's turn</p>
+
+      <div class="board" id="board">
+        <div class="cell" data-index="0"></div>
+        <div class="cell" data-index="1"></div>
+        <div class="cell" data-index="2"></div>
+        <div class="cell" data-index="3"></div>
+        <div class="cell" data-index="4"></div>
+        <div class="cell" data-index="5"></div>
+        <div class="cell" data-index="6"></div>
+        <div class="cell" data-index="7"></div>
+        <div class="cell" data-index="8"></div>
+      </div>
+
+      <div class="buttons">
+        <button id="resetBtn">Reset Game</button>
+        <button id="modeSwitchBtn">Switch to AI Mode</button>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>Made by Tanmay Gunjal</p>
+    </footer>
   </div>
 
   <script src="script.js"></script>
